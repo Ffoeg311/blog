@@ -1,0 +1,7 @@
+<% @articles.each do |article| %>
+	<h3> <%= article.title %> </h3>
+  <h4><%= article.subtitle %></h4>
+	<p> <%= raw article.content[0..500]%>... </p>
+  <%= link_to "Read the rest of this article...", article %>
+<% end %>
+<%= will_paginate @articles, class:"text-center" %>
