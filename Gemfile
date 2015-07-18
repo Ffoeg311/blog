@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use devise for user authentication
 gem 'devise'
+gem 'devise_invitable', '~> 1.3.4'
 
 gem 'will_paginate'
 # Use ActiveModel has_secure_password
