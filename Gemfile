@@ -52,5 +52,7 @@ group :development, :test do
 
   # yay testing!
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
