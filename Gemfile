@@ -47,6 +47,9 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  # No emailing in development.
+  gem "letter_opener"
+
   # yay testing!
   gem 'rspec-rails'
 end
