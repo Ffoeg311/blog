@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :articles
-  devise_for :users
+  
+   
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+  #devise_for :users
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
