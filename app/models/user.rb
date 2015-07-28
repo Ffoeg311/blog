@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :articles
+
+  # Set the default value of accepted to false
+  after_initialize :default_values
+  private
+    def default_values
+      self.accepted = false
+    end
+
 end
