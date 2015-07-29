@@ -17,8 +17,8 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
   # Use letter opener 
   config.action_mailer.delivery_method = :letter_opener
-  # Set the root url for the mailer
-  config.action_mailer.default_url_options = { :host => ('localhost:' + Rails::Server.new.options[:Port].to_s) }
+  # Set the root url for the mailer TODO do an error handler here
+  config.action_mailer.default_url_options = { :host => ('localhost:3000') } #Rails::Server.new.options[:Port].to_s) }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
