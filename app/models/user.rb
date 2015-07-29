@@ -6,11 +6,16 @@ class User < ActiveRecord::Base
 
   has_many :articles
 
+  # Activates the user
+  def activate
+    self.accepted = true
+  end
+
   # Set the default value of accepted to false
   after_initialize :default_values
   private
     def default_values
-      self.accepted = false
+      self.accepted = false if self.accepted.nil? 
     end
 
 end
