@@ -1,5 +1,7 @@
 require "rails_helper"
 
-RSpec.describe NewUserConfirmMailer, type: :mailer do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe AcceptUserMailer, type: :mailer do
+  it "has a valid factory" do
+    
+  end
 end
