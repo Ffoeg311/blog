@@ -11,7 +11,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
      super
-     UserAcceptanceMailer.accept_user_request_email.deliver_now
+     # Rails.logger.info params[:user][:email]
+     user = User.where(email: params[:user][:email])
+     AcceptUserMailer.accept_user_request_email.deliver_now
    end
 
   # GET /resource/edit

@@ -23,5 +23,10 @@
     user.activate
     user.accepted.should be true
   end
+
+  it 'should have an accepted token when initialized' do
+    FactoryGirl.create(:user).accept_token.should_not be_nil
+  end
+
 end
  
